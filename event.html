@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/basic.css" rel="stylesheet"/>
+    <link href="./css/header.css" rel="stylesheet"/>
+    <link href="./css/footer.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .ongoing_event{
+            width: 960px;
+        }
+        .ongoing_event p{
+            left: 0px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 13px;
+        }
+        .main_event img{
+            width: 900px;
+            height: 100px;
+        }
+    </style>
+    <title>이벤트</title>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="top">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="./images/logo.png"/>
+                    <img src="./images/logo_font.png"/>
+                </div>
+            </a>
+            <div class="top_nav">
+                <a href="./login.html">로그인</a>
+                <a href="./register.html">회원가입</a>
+                <a href="#"><img src="./images/cart.png"/></a>
+            </div>
+        </div>
+        <div class="main_nav">
+            <div class="main_category">
+                <a href="./info.html">t-mate 소개</a>
+                <a href="./community.html">커뮤니티</a>
+                <a href="#">t-mate몰</a>
+                <a href="#">공지사항</a>
+                <a href="./event.html">이벤트</a>
+            </div>
+            <div class="main_search">
+                <input type="search" name="search" id="search" placeholder="검색" class="search_bar">
+                <a href="#"><img src="./images/search.png"/></a>
+            </div>
+        </div>
+    </header>
+    
+    <!--section-->
+    <section>
+        <div class="main_event"></div>
+            <div class="ongoing_event">
+                <p>진행 중인 이벤트 > </p>
+                <img src="./images/eventbanner1.png"/>
+            </div>
+            <div class="past_event">
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="bottom">
+            <div class="contact">
+                <table>
+                    <tr>
+                        <th>Contact</th>
+                        <td>02-1234-4567 | t-mate@tmate.com</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>서울시 강남구 역삼동</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bottom_law">
+                <div class="law_link">
+                    <a href="#">이용약관</a> | 
+                    <a href="#">개인정보처리방침</a> | 
+                    <a href="#">이용안내</a>
+                </div>
+                <p>Copyright&copy; Jeon Chaemin All Rights Reserved</p>
+            </div>
+            <div class="links">
+                <a href="#">
+                    <img src="./images/instagram.png"/>
+                </a>
+                <a href="#">
+                    <img src="./images/facebook.png"/>
+                </a>
+                <a href="#">
+                    <img src="./images/youtube.png"/>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

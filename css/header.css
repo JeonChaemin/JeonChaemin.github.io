@@ -1,0 +1,62 @@
+/*header*/
+.top{
+    width: 960px;
+    height: 100px;
+    position: relative;
+}
+.logo{
+    margin: 20px;
+}
+.logo img{
+    height: 60px;
+}
+.top_nav{
+    top: 0px;
+    right: 30px;
+    position: absolute;
+}
+.top_nav a{
+    height: 14px;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+.top_nav img{
+    top: 3px;
+    height: 15px;
+    position: absolute;
+    margin-left: 10px;
+}
+.main_nav{
+    width: 960px;
+    height: 100px;
+    position: relative;
+}
+.main_category a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-right: 40px;
+}
+.main_search{
+    top: 3px;
+    right: 70px;
+    position: absolute;
+}
+.search_bar{
+    border: 0px;
+    border-bottom: 2px solid gray;
+}
+.main_search img{
+    width: 10px;
+    height: 10px;
+}
+
+/*section*/
+.main_banner{
+    width: 930px;
+    text-align: center;
+    margin-bottom: 100px;
+}

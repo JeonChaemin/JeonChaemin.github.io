@@ -1,0 +1,69 @@
+.bottom{
+    width: 960px;
+    height: 80px;
+    position: relative;
+    border-top: 1px solid lightgray;
+}
+.contact{
+    width: 300px;
+    height: auto;
+    top: 5px;
+    left: 5px;
+    position: relative;
+}
+.contact table{
+    position: absolute;
+}
+.contact th{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 0.5px;
+}
+.contact td{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 0.5px;
+    padding-left: 8px;
+}
+.bottom_law{
+    top: 5px;
+    right: 5px;
+    height: 35px;
+    position: absolute;
+}
+.law_link{
+    top: 0px;
+    right: 0px;
+    width: max-content;
+    position: absolute;
+}
+.bottom_law a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 12px;
+}
+.bottom_law p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 12px;
+    right: 0px;
+    bottom: 0px;
+    width: max-content;
+    position: absolute;
+}
+.links{
+    bottom: 10px;
+    left: 8px;
+    position: absolute;
+}
+.links img{
+    width: 18px;
+    height: 18px;
+    
+}

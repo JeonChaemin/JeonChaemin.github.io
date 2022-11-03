@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/basic.css" rel="stylesheet">
+    <link href="./css/header.css" rel="stylesheet"/>
+    <link href="./css/footer.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /*section*/
+        .main_register{
+            text-align: center;
+            /* position: absolute;
+            left: 50%;
+            transform: translateX(-50%); */
+        }
+        .main_register h3{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 500;
+            font-size: 25px;
+            width: 480px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid lightgray;
+            margin-bottom: 25px;
+            margin-left: 25%;
+        }
+        .register_nav{
+            height: 20px;
+        }
+        .register_nav a{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .register_nav img{
+            width: 13px;
+            height: 13px;
+            margin: 0px 20px;
+        }
+
+        /*form*/
+        .register_form{
+            margin-top: 30px;
+            text-align: center;
+        }
+        .register_form input::placeholder{
+            color: rgb(214, 214, 214)
+        }
+        .register_form input:focus{
+            outline: none;
+            border-bottom: 2px solid #7a75d3;
+        }
+        .text_input_register_id{
+            width: 245px;
+            height: 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            border: none;
+            border-bottom: 2px solid rgb(209, 209, 209);
+            margin-bottom: 25px;
+        }
+        .btn_confirm{
+            top: 2px;
+            width: 100px;
+            height: 33px;
+            background-color: rgb(97, 97, 97);
+            border: none;
+            border-radius: 3px;
+            color: white;font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 200;
+            font-size: 13px;
+            letter-spacing: 1px;
+            line-height: 15px;
+            margin-left: 10px;
+        }
+        .text_input_register{
+            width: 360px;
+            height: 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            border: none;
+            border-bottom: 2px solid rgb(209, 209, 209);
+            margin-bottom: 25px;
+        }
+        .register_mobile p{
+            display: inline;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+        }
+        #register_mobile1{
+            border: none;
+            width: 50px;
+            height: 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            border-bottom: 2px solid rgb(209, 209, 209);
+            margin-bottom: 25px;
+        }
+        .text_input_register_mobile{
+            width: 75px;
+            height: 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            border: none;
+            border-bottom: 2px solid rgb(209, 209, 209);
+        }
+        .btn_final_register{
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 40px;
+            color: #f9f4ad;
+            background-color: #7a75d3;
+            border-radius: 3px;
+            border: none;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+    </style>
+    <title>회원가입</title>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="top">
+            <a href="./index.html">
+                <div class="logo">
+                    <img src="./images/logo.png"/>
+                    <img src="./images/logo_font.png"/>
+                </div>
+            </a>
+            <div class="top_nav">
+                <a href="./login.html">로그인</a>
+                <a href="./register.html">회원가입</a>
+                <a href="#"><img src="./images/cart.png"/></a>
+            </div>
+        </div>
+        <div class="main_nav">
+            <div class="main_category">
+                <a href="./info.html">t-mate 소개</a>
+                <a href="./community.html">커뮤니티</a>
+                <a href="#">t-mate몰</a>
+                <a href="#">공지사항</a>
+                <a href="./event.html">이벤트</a>
+            </div>
+            <div class="main_search">
+                <input type="search" name="search" id="search" placeholder="검색" class="search_bar">
+                <a href="#"><img src="./images/search.png"/></a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="main_register">
+            <h3>회원가입</h3>
+            <div class="register_nav">
+                <a href="#">이용약관</a>
+                <img src="./images/more_than.png"/>
+                <a href="#">정보 입력</a>
+                <img src="./images/more_than.png"/>
+                <a href="#">가입 완료</a>
+            </div>
+            <div class="register_form">
+                <form action="" method="post" name="register" id="register">
+                    <input type="text" name="register_id" id="register_id" placeholder="아이디(영문 대소문자, 4자~16자)" class="text_input_register_id">
+                    <input type="button" name="confirm_id" id="confirm_id" value="중복확인" class="btn_confirm"><br/>
+                    <input type="password" name="register_pwd" id="register_pwd" placeholder="비밀번호(영문 대소문자/숫자/특수문자 10자~16자)" class="text_input_register"><br/>
+                    <input type="password" name="register_pwd_confirm" id="register_pwd_confirm" placeholder="비밀번호 확인" class="text_input_register"><br/>
+                    <input type="text" name="register_name" id="register_name" placeholder="이름" class="text_input_register"><br/>
+                    <input type="email" name="register_email" id="register_email" placeholder="이메일" class="text_input_register"><br/>
+                    <div class="register_mobile">
+                        <select name="register_mobile1" id="register_mobile1">
+                            <option value="n1">010</option>
+                            <option value="n1">011</option>
+                            <option value="n1">016</option>
+                            <option value="n1">017</option>
+                            <option value="n1">018</option>
+                            <option value="n1">019</option>
+                        </select>
+                        <p>&nbsp;-&nbsp;</p>
+                        <input type="text" name="register_mobile2" id="register_mobile2" class="text_input_register_mobile">
+                        <p>&nbsp;-&nbsp;</p>
+                        <input type="text" name="register_mobile3" id="register_mobile3" class="text_input_register_mobile">
+                        <input type="button" name="confirm_id" id="confirm_id" value="인증번호 받기" class="btn_confirm"><br/>
+                        <input type="button" name="btn_final_register" id="btn_final_register" value="회원가입" class="btn_final_register">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="bottom">
+            <div class="contact">
+                <table>
+                    <tr>
+                        <th>Contact</th>
+                        <td>02-1234-4567 | t-mate@tmate.com</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>서울시 강남구 역삼동</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bottom_law">
+                <div class="law_link">
+                    <a href="#">이용약관</a> | 
+                    <a href="#">개인정보처리방침</a> | 
+                    <a href="#">이용안내</a>
+                </div>
+                <p>Copyright&copy; Jeon Chaemin All Rights Reserved</p>
+            </div>
+            <div class="links">
+                <a href="#">
+                    <img src="./images/instagram.png"/>
+                </a>
+                <a href="#">
+                    <img src="./images/facebook.png"/>
+                </a>
+                <a href="#">
+                    <img src="./images/youtube.png"/>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

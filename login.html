@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/basic.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <style>
+        /*body*/
+        body {
+            width: 480px;
+        }
+
+        /*header*/
+        .login_top_nav {
+            border-bottom: 2px solid lightgray;
+        }
+        .btn_back {
+            background-color: rgb(255, 255, 255);
+            width: 80px;
+            height: 20px;
+            border: 1px solid rgb(230, 230, 230);
+            border-radius: 20px;
+            margin-top: 30px;
+            position: relative;
+        }
+        .btn_back img {
+            width: 15px;
+            height: 15px;
+            top: 3px;
+            left: 2px;
+            position: absolute;
+        }
+        .btn_back p {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            color: rgb(117, 117, 117);
+            font-size: 14px;
+            line-height: 14px;
+            left: 20px;
+            top: 3px;
+            position: absolute;
+        }
+        .logo {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            height: 60px;
+        }
+
+        /*section*/
+        .main_login {
+            width: 340px;
+        }
+        .logintabnav {
+            margin-top: 50px;
+            width: 480px;
+            height: 100px;
+            font-size: 0px;
+            text-align: center;
+        }
+        .logintabnav li {
+            display: inline-block;
+            width: 170px;
+            height: 40px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 40px;
+            border: 1px solid rgb(209, 209, 209);
+            background-color: rgb(240, 240, 240);
+            color: rgb(170, 170, 170);
+            border-radius: 5px;
+        }
+        .logintabpage {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 200px;
+        }
+        .text_input_login {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 40px;
+            width: 360px;
+            margin-bottom: 10px;
+            border: none;
+            border-bottom: 2px solid rgb(209, 209, 209);
+        }
+        .logintabnav input::placeholder {
+            color: rgb(214, 214, 214)
+        }
+        .logintabnav input:focus {
+            outline: none;
+            border-bottom: 2px solid #7a75d3;
+        }
+        .logintabnav ul li:hover{
+            cursor: pointer;
+        }
+        .logintabpages{
+            z-index: 2;
+        }
+        .btn_login {
+            width: 360px;
+            height: 40px;
+            margin-top: 30px;
+            background-color: #7a75d3;
+            border: none;
+            color: #f9f4ad;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+            border-radius: 3px;
+        }
+        .login_option {
+            width: 360px;
+            height: 50px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .login_find {
+            width: 250px;
+            float: left;
+        }
+        .login_find a {
+            display: inline-block;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .login_register {
+            float: right;
+            text-align: right;
+        }
+        .login_register a {
+            display: inline-block;
+            right: 0px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            let containers = document.querySelector(".main_login")
+
+            let nav = containers.querySelector(".logintabnav ul")
+            nav.style.display = "block"
+
+            let navitem = containers.querySelector(".logintabnav ul li")
+            let ident = navitem.id.split("_")[1]
+            navitem.parentNode.setAttribute("data-current", ident)
+            navitem.setAttribute("style", "background-color: rgb(280, 280, 280)")
+
+            let pages = containers.querySelectorAll(".logintabpage")
+            for (let i = 1; i < pages.length; i++) {
+                pages[i].style.display = "none"
+            }
+
+            let tabs = containers.querySelectorAll(".logintabnav ul li")
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].onclick = displayPage
+            }
+
+        }
+
+        //탭 클릭
+        function displayPage() {
+            let current = this.parentNode.getAttribute("data-current")
+            document.getElementById("logintabnav_" + current).style.backgroundColor="rgb(240, 240, 240)"
+            document.getElementById("logintabpage_" + current).style.display = "none"
+            
+            let ident = this.id.split("_")[1]  /* 번호 */
+            this.setAttribute("style", "background-color:rgb(280, 280, 280)")
+            document.getElementById("logintabpage_" + ident).style.display = "block"
+            this.parentNode.setAttribute("data-current", ident)
+        }
+    </script>
+    </script>
+    <title>로그인</title>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="login_top_nav">
+            <div class="btn_back">
+                <a href="./index.html">
+                    <img src="./images/less_than.png" />
+                    <p>뒤로가기</p>
+                </a>
+            </div>
+            <div class="logo">
+                <img src="./images/logo.png" />
+                <img src="./images/logo_font.png" />
+            </div>
+        </div>
+    </header>
+
+    <!--section-->
+    <section>
+        <div class="main_login">
+            <div class="logintabnav">
+                <ul id="logintype">
+                    <li id="logintabnav_1">기존 회원 로그인
+                    </li>
+                    <li id="logintabnav_2">비회원 배송조회</li>
+                </ul>
+            </div>
+
+            <div class="logintabpages">
+                <div class="logintabpage" id="logintabpage_1">
+                    <input type="text" name="user_id" id="user_id" placeholder="아이디" class="text_input_login"><br/>
+                    <input type="password" name="pwd" id="pwd" placeholder="비밀번호" class="text_input_login"><br/>
+                    <input type="button" name="btn_login" id="btn_login" value="로그인" class="btn_login">
+                    <div class="login_option">
+                        <div class="login_find">
+                            <a href="#">아이디 찾기</a> |
+                            <a href="#">비밀번호 찾기</a>
+                        </div>
+                        <div class="login_register">
+                            <a href="./register.html">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logintabpage" id="logintabpage_2">
+                    <input type="text" name="user_name" id="user_name" placeholder="주문자 이름"
+                        class="text_input_login"><br/>
+                    <input type="text" name="user_order_num" id="user_order_num" placeholder="주문 번호"
+                        class="text_input_login"><br/>
+                    <input type="button" name="btn_login" id="btn_login" value="배송 조회" class="btn_login">
+                    <div class="login_option">
+                        <div class="login_find">
+                            <a href="#">주문 번호를 잊어버리셨나요?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>

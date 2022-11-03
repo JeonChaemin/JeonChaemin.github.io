@@ -1,0 +1,39 @@
+/*주의사항: <style></style> 사용하지 않는다*/
+/*초기화*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 960px;
+    height: auto;
+    margin: 0px auto;
+}
+
+a{
+    text-decoration: none;
+    color: black; /*#000000, #000, rgb(0, 0, 0)*/
+}
+
+a:visited{
+    text-decoration: none;
+    color: black; /*#000000, #000, rgb(0, 0, 0)*/
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
